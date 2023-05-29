@@ -1,12 +1,28 @@
+import { shallow } from "zustand/shallow";
+import useFormStore from "../store";
+
 function ResumeHeader() {
+  const [fname, lname, title, address, mobile] = useFormStore(
+    (state) => [
+      state.fname,
+      state.lname,
+      state.title,
+      state.address,
+      state.mobile,
+    ],
+    shallow
+  );
   return (
     <header className="flex flex-col gap-2">
-      <h1 className="text-3xl font-bold">John Doe</h1>
+      <h1 className="text-3xl font-bold">
+        {fname} {lname}
+      </h1>
 
-      <p className="text-xl">Software Engineer</p>
+      <p className="text-xl">{title}</p>
 
-      <p className="text-lg">1234 Main Street, City, State 12345</p>
-      <p>604-555-5555</p>
+      <p className="text-lg">{address}</p>
+
+      <p>{mobile}</p>
     </header>
   );
 }
