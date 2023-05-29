@@ -41,6 +41,15 @@ function Form() {
                 id="address"
               />
             </div>
+            <div className="flex flex-col gap-2">
+              <label htmlFor="mobile">Phone Number</label>
+              <input
+                type="tel"
+                className="rounded-md border border-gray-300 p-2 outline-none focus:border-blue-500"
+                name="mobile"
+                id="mobile"
+              />
+            </div>
           </div>
         </div>
       </form>
