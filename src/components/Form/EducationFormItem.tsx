@@ -71,7 +71,7 @@ function EducationFormItem({
           </select>
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-5">
+      <div className="mb-5 grid grid-cols-2 gap-5">
         <div className="flex flex-col gap-2">
           <label htmlFor="startYear">Start Year</label>
           <input
