@@ -15,6 +15,7 @@ function WorkForm() {
         };
         return <WorkFormItem {...props} />;
       })}
+      <AddButton add={"Work"} />
     </div>
   );
 }

@@ -13,7 +13,7 @@ function EducationForm() {
         return <EducationFormItem {...props} />;
       })}
 
-      <AddButton />
+      <AddButton add={"Education"} />
     </div>
   );
 }
