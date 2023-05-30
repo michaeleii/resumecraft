@@ -10,7 +10,7 @@ function Work() {
   return (
     <div className="mt-2 flex flex-col  gap-3 pb-5">
       <h3 className="text-xl font-bold tracking-tighter">Work Experience</h3>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col">
         <div className="flex justify-between">
           <h4 className="text-lg tracking-tighter">{company}</h4>
           <p>
