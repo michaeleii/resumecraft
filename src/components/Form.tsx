@@ -12,6 +12,24 @@ function Form() {
     updateTitle,
     updateAddress,
     updateMobile,
+    school,
+    degree,
+    fieldOfStudy,
+    startYear,
+    endYear,
+    updateSchool,
+    updateDegree,
+    updateFieldOfStudy,
+    updateStartYear,
+    updateEndYear,
+    company,
+    position,
+    startDate,
+    endDate,
+    updateCompany,
+    updatePosition,
+    updateStartDate,
+    updateEndDate,
   ] = useFormStore((state) => [
     state.fname,
     state.lname,
@@ -23,6 +41,24 @@ function Form() {
     state.updateTitle,
     state.updateAddress,
     state.updateMobile,
+    state.school,
+    state.degree,
+    state.fieldOfStudy,
+    state.startYear,
+    state.endYear,
+    state.updateSchool,
+    state.updateDegree,
+    state.updateFieldOfStudy,
+    state.updateStartYear,
+    state.updateEndYear,
+    state.company,
+    state.position,
+    state.startDate,
+    state.endDate,
+    state.updateCompany,
+    state.updatePosition,
+    state.updateStartDate,
+    state.updateEndDate,
   ]);
   return (
     <div className="p-5">
@@ -102,6 +138,8 @@ function Form() {
                 className="rounded-md border border-gray-300 p-2 outline-none focus:border-blue-500"
                 name="school"
                 id="school"
+                value={school}
+                onChange={(e) => updateSchool(e.currentTarget.value)}
               />
             </div>
             <div className="grid grid-cols-2 gap-5">
@@ -112,6 +150,8 @@ function Form() {
                   className="rounded-md border border-gray-300 p-2 outline-none focus:border-blue-500"
                   name="field"
                   id="field"
+                  value={fieldOfStudy}
+                  onChange={(e) => updateFieldOfStudy(e.currentTarget.value)}
                 />
               </div>
               <div className="flex flex-col gap-2">
@@ -120,35 +160,41 @@ function Form() {
                   name="degree"
                   id="degree"
                   className="rounded-md border border-gray-300 p-2 outline-none focus:border-blue-500"
+                  value={degree}
+                  onChange={(e) => updateDegree(e.currentTarget.value)}
                 >
                   <option value="">--Select a degree--</option>
-                  <option value="highschool">High School</option>
-                  <option value="certificate">Certificate</option>
-                  <option value="diploma">Diploma</option>
-                  <option value="associate">Associate</option>
-                  <option value="bachelor">Bachelor</option>
-                  <option value="master">Master</option>
-                  <option value="doctorate">Doctorate</option>
+                  <option value="High School">High School</option>
+                  <option value="Certificate">Certificate</option>
+                  <option value="Diploma">Diploma</option>
+                  <option value="Associate">Associate</option>
+                  <option value="Bachelor">Bachelor</option>
+                  <option value="Master">Master</option>
+                  <option value="Doctorate">Doctorate</option>
                 </select>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-5">
               <div className="flex flex-col gap-2">
-                <label htmlFor="startDate">Start Year</label>
+                <label htmlFor="startYear">Start Year</label>
                 <input
-                  type="month"
+                  type="text"
                   className="rounded-md border border-gray-300 p-2 outline-none focus:border-blue-500"
-                  name="startDate"
-                  id="startDate"
+                  name="startYear"
+                  id="startYear"
+                  value={startYear}
+                  onChange={(e) => updateStartYear(e.currentTarget.value)}
                 />
               </div>
               <div className="flex flex-col gap-2">
-                <label htmlFor="endDate">End Year</label>
+                <label htmlFor="endYear">End Year</label>
                 <input
-                  type="month"
+                  type="text"
                   className="rounded-md border border-gray-300 p-2 outline-none focus:border-blue-500"
-                  name="endDate"
-                  id="endDate"
+                  name="endYear"
+                  id="endYear"
+                  value={endYear}
+                  onChange={(e) => updateEndYear(e.currentTarget.value)}
                 />
               </div>
             </div>
@@ -164,6 +210,8 @@ function Form() {
                 className="rounded-md border border-gray-300 p-2 outline-none focus:border-blue-500"
                 name="company"
                 id="company"
+                value={company}
+                onChange={(e) => updateCompany(e.currentTarget.value)}
               />
             </div>
             <div className="flex flex-col gap-2">
@@ -173,25 +221,31 @@ function Form() {
                 className="rounded-md border border-gray-300 p-2 outline-none focus:border-blue-500"
                 name="position"
                 id="position"
+                value={position}
+                onChange={(e) => updatePosition(e.currentTarget.value)}
               />
             </div>
             <div className="grid grid-cols-2 gap-5">
               <div className="flex flex-col gap-2">
                 <label htmlFor="startDate">Start Year</label>
                 <input
-                  type="month"
+                  type="text"
                   className="rounded-md border border-gray-300 p-2 outline-none focus:border-blue-500"
                   name="startDate"
                   id="startDate"
+                  value={startDate}
+                  onChange={(e) => updateStartDate(e.currentTarget.value)}
                 />
               </div>
               <div className="flex flex-col gap-2">
                 <label htmlFor="endDate">End Year</label>
                 <input
-                  type="month"
+                  type="text"
                   className="rounded-md border border-gray-300 p-2 outline-none focus:border-blue-500"
                   name="endDate"
                   id="endDate"
+                  value={endDate}
+                  onChange={(e) => updateEndDate(e.currentTarget.value)}
                 />
               </div>
             </div>

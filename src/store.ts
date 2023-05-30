@@ -6,6 +6,15 @@ interface FormState {
   title: string;
   address: string;
   mobile: string;
+  school: string;
+  fieldOfStudy: string;
+  degree: string;
+  startYear: string;
+  endYear: string;
+  company: string;
+  position: string;
+  startDate: string;
+  endDate: string;
 }
 interface FormActions {
   updateFname: (fname: FormState["fname"]) => void;
@@ -13,6 +22,15 @@ interface FormActions {
   updateTitle: (title: FormState["title"]) => void;
   updateAddress: (address: FormState["address"]) => void;
   updateMobile: (mobile: FormState["mobile"]) => void;
+  updateSchool: (school: FormState["school"]) => void;
+  updateFieldOfStudy: (fieldOfStudy: FormState["fieldOfStudy"]) => void;
+  updateDegree: (degree: FormState["degree"]) => void;
+  updateStartYear: (startYear: FormState["startYear"]) => void;
+  updateEndYear: (endYear: FormState["endYear"]) => void;
+  updateCompany: (company: FormState["company"]) => void;
+  updatePosition: (position: FormState["position"]) => void;
+  updateStartDate: (startDate: FormState["startDate"]) => void;
+  updateEndDate: (endDate: FormState["endDate"]) => void;
 }
 
 const useFormStore = create<FormState & FormActions>()((set) => ({
@@ -26,6 +44,24 @@ const useFormStore = create<FormState & FormActions>()((set) => ({
   updateTitle: (title) => set({ title }),
   updateAddress: (address) => set({ address }),
   updateMobile: (mobile) => set({ mobile }),
+  school: "University of British Columbia",
+  fieldOfStudy: "Computer Science",
+  degree: "",
+  startYear: "2023",
+  endYear: "Present",
+  updateSchool: (school) => set({ school }),
+  updateFieldOfStudy: (fieldOfStudy) => set({ fieldOfStudy }),
+  updateDegree: (degree) => set({ degree }),
+  updateStartYear: (startYear) => set({ startYear }),
+  updateEndYear: (endYear) => set({ endYear }),
+  company: "Google",
+  position: "Software Engineer",
+  startDate: "2021",
+  endDate: "Present",
+  updateCompany: (company) => set({ company }),
+  updatePosition: (position) => set({ position }),
+  updateStartDate: (startDate) => set({ startDate }),
+  updateEndDate: (endDate) => set({ endDate }),
 }));
 
 export default useFormStore;
