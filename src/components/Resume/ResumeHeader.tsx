@@ -1,5 +1,5 @@
 import { shallow } from "zustand/shallow";
-import useFormStore from "../store";
+import useFormStore from "../../store";
 
 function ResumeHeader() {
   const [fname, lname, title, address, mobile] = useFormStore(

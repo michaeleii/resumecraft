@@ -1,5 +1,5 @@
-import Form from "./Form";
-import Resume from "./Resume";
+import Form from "./Form/Form";
+import Resume from "./Resume/Resume";
 
 function MainContainer() {
   return (

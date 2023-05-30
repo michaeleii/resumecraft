@@ -1,4 +1,4 @@
-import useFormStore from "../store";
+import useFormStore from "../../store";
 
 function Work() {
   const [company, position, startDate, endDate] = useFormStore((state) => [

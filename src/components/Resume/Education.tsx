@@ -1,4 +1,4 @@
-import useFormStore from "../store";
+import useFormStore from "../../store";
 
 function Education() {
   const [school, degree, fieldOfStudy, startYear, endYear] = useFormStore(
