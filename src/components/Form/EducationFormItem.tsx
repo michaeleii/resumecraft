@@ -1,5 +1,6 @@
 import useFormStore from "../../store";
 import Education from "../../interfaces/Education";
+import DeleteButton from "./DeleteButton";
 
 function EducationFormItem({
   school,
@@ -25,7 +26,10 @@ function EducationFormItem({
   return (
     <>
       <div className="flex flex-col gap-2">
-        <label htmlFor="school">School</label>
+        <div className="flex justify-between">
+          <label htmlFor="school">School</label>
+          <DeleteButton del={"Education"} i={i} />
+        </div>
         <input
           type="text"
           className="rounded-md border border-gray-300 p-2 outline-none focus:border-blue-500"

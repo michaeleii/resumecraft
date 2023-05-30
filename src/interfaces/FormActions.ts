@@ -23,11 +23,13 @@ interface FormActions {
     endYear: Education["endYear"],
     index: number
   ) => void;
+  deleteEducation: (index: number) => void;
   updateWork: (work: FormState["work"]) => void;
   updateWorkCompany: (company: Work["company"], index: number) => void;
   updateWorkPosition: (position: Work["position"], index: number) => void;
   updateWorkStartYear: (startYear: Work["startYear"], index: number) => void;
   updateWorkEndYear: (endYear: Work["endYear"], index: number) => void;
+  deleteWork: (index: number) => void;
 }
 
 export default FormActions;

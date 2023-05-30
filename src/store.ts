@@ -23,29 +23,34 @@ const useFormStore = create<FormState & FormActions>()((set) => ({
     },
   ],
   updateEducation: (education) => set({ education }),
-  updateEducationSchool: (school, index) => {
+  updateEducationSchool: (school, i) => {
     const education = [...useFormStore.getState().education];
-    education[index].school = school;
+    education[i].school = school;
     set({ education });
   },
-  updateEducationFieldOfStudy: (fieldOfStudy, index) => {
+  updateEducationFieldOfStudy: (fieldOfStudy, i) => {
     const education = [...useFormStore.getState().education];
-    education[index].fieldOfStudy = fieldOfStudy;
+    education[i].fieldOfStudy = fieldOfStudy;
     set({ education });
   },
-  updateEducationDegree: (degree, index) => {
+  updateEducationDegree: (degree, i) => {
     const education = [...useFormStore.getState().education];
-    education[index].degree = degree;
+    education[i].degree = degree;
     set({ education });
   },
-  updateEducationStartYear: (startYear, index) => {
+  updateEducationStartYear: (startYear, i) => {
     const education = [...useFormStore.getState().education];
-    education[index].startYear = startYear;
+    education[i].startYear = startYear;
     set({ education });
   },
-  updateEducationEndYear: (endYear, index) => {
+  updateEducationEndYear: (endYear, i) => {
     const education = [...useFormStore.getState().education];
-    education[index].endYear = endYear;
+    education[i].endYear = endYear;
+    set({ education });
+  },
+  deleteEducation: (i: number) => {
+    const education = [...useFormStore.getState().education];
+    education.splice(i, 1);
     set({ education });
   },
   work: [
@@ -57,24 +62,29 @@ const useFormStore = create<FormState & FormActions>()((set) => ({
     },
   ],
   updateWork: (work) => set({ work }),
-  updateWorkCompany: (company, index) => {
+  updateWorkCompany: (company, i) => {
     const work = [...useFormStore.getState().work];
-    work[index].company = company;
+    work[i].company = company;
     set({ work });
   },
-  updateWorkPosition: (position, index) => {
+  updateWorkPosition: (position, i) => {
     const work = [...useFormStore.getState().work];
-    work[index].position = position;
+    work[i].position = position;
     set({ work });
   },
-  updateWorkStartYear: (startYear, index) => {
+  updateWorkStartYear: (startYear, i) => {
     const work = [...useFormStore.getState().work];
-    work[index].startYear = startYear;
+    work[i].startYear = startYear;
     set({ work });
   },
-  updateWorkEndYear: (endYear, index) => {
+  updateWorkEndYear: (endYear, i) => {
     const work = [...useFormStore.getState().work];
-    work[index].endYear = endYear;
+    work[i].endYear = endYear;
+    set({ work });
+  },
+  deleteWork: (i: number) => {
+    const work = [...useFormStore.getState().work];
+    work.splice(i, 1);
     set({ work });
   },
 }));

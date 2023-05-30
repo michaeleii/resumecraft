@@ -1,5 +1,6 @@
 import Work from "../../interfaces/Work";
 import useFormStore from "../../store";
+import DeleteButton from "./DeleteButton";
 
 function WorkFormItem({
   company,
@@ -18,7 +19,10 @@ function WorkFormItem({
   return (
     <>
       <div className="flex flex-col gap-2">
-        <label htmlFor="company">Company</label>
+        <div className="flex justify-between">
+          <label htmlFor="company">Company</label>
+          <DeleteButton del={"Work"} i={i} />
+        </div>
         <input
           type="text"
           className="rounded-md border border-gray-300 p-2 outline-none focus:border-blue-500"
