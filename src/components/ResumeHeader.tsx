@@ -13,7 +13,7 @@ function ResumeHeader() {
     shallow
   );
   return (
-    <header className="flex flex-col gap-2">
+    <header className="flex flex-col gap-2 border-b-2 border-black pb-2">
       <h1 className="text-3xl font-bold">
         {fname} {lname}
       </h1>
